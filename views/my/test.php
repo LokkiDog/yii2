@@ -1,23 +1,23 @@
 <h1>Test page</h1>
-
+<?php use app\components\MyWidget;?>
 <?php
 /** @var TYPE_NAME $cats */
 //echo $cats;
 //debug($cats);
 //echo count($cats->products);
 //debug($cats);
-foreach ($cats as $cat) {
-    echo '<ul>';
-        echo '<li>'.$cat->title.'</li>';
-        $products = $cat->products;
-        foreach ($products as $product) {
-            echo '<ul>';
-            echo '<li>'.$product->title.'</li>';
-            echo '</ul>';
-            }
-    echo '</ul>';
-
-}
+//foreach ($cats as $cat) {
+//    echo '<ul>';
+//        echo '<li>'.$cat->title.'</li>';
+//        $products = $cat->products;
+//        foreach ($products as $product) {
+//            echo '<ul>';
+//            echo '<li>'.$product->title.'</li>';
+//            echo '</ul>';
+//            }
+//    echo '</ul>';
+//
+//}
 
 //if(is_object($cats)) {
 //    foreach ($cats as $cat) {
@@ -30,6 +30,9 @@ foreach ($cats as $cat) {
 //}
 ?>
 
+<?php  MyWidget::begin(['name'=>'Вася']);?>
+    <h1>Hellow, test view</h1>
+<?php  MyWidget::end();?>
 
 
 <div class="btn btn-success" id="btn">Click</div>

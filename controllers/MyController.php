@@ -17,9 +17,9 @@ class MyController extends AppController
         $model = new TestForm();
 
         if($model->load(Yii::$app->request->post())) {
-            if($model->validate()){
+            if($model->save()){
                 Yii::$app->session->setFlash('success','Успех!');
-//                $this->refresh();
+                $this->refresh();
             }
             else{
                 Yii::$app->session->setFlash('error','Ошибка!');
